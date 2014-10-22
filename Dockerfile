@@ -14,6 +14,7 @@ ADD configs/timezone /etc/timezone
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 # Installing saltstack
+RUN apt-get update
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:saltstack/salt
 RUN apt-get update
