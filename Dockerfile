@@ -13,8 +13,6 @@ MAINTAINER Erik Kaareng-Sunde esu@enonic.com
 ADD configs/timezone /etc/timezone
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
-# Installing wget
-RUN apt-get -y install wget
 # Installing saltstack
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:saltstack/salt
